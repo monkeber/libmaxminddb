@@ -36,3 +36,4 @@ Makefile.in
 \#*\#
 aclocal.m4
 stamp-h*
+build/*
