@@ -13,13 +13,13 @@ add_custom_target(
 	COMMENT "Building maxmind"
 )
 
-if (BUILD_SHARED_LIBS)
+if(BUILD_SHARED_LIBS)
 	add_library(${PROJECT_NAME} SHARED IMPORTED GLOBAL)
 	set(${PROJECT_NAME}_LIB_PATH ${CMAKE_CURRENT_SOURCE_DIR}/src/.libs/libmaxminddb.so)
-else ()
+else()
 	add_library(${PROJECT_NAME} STATIC IMPORTED GLOBAL)
 	set(${PROJECT_NAME}_LIB_PATH ${CMAKE_CURRENT_SOURCE_DIR}/src/.libs/libmaxminddb.a)
-endif ()
+endif()
 
 add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_built)
 
