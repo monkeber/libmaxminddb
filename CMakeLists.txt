@@ -30,7 +30,7 @@ set_property(TARGET ${PROJECT_NAME}
 
 target_include_directories(${PROJECT_NAME}
 	INTERFACE
-		${PROJECT_SOURCE_DIR}/include
+		${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 # Unused executable so cmake will generate library and custom target.
