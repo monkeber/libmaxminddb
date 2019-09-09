@@ -28,9 +28,8 @@ set_property(TARGET ${PROJECT_NAME}
 		${${PROJECT_NAME}_LIB_PATH}
 )
 
-target_include_directories(${PROJECT_NAME}
-	INTERFACE
-		${CMAKE_CURRENT_SOURCE_DIR}/include
+set_property(TARGET ${PROJECT_NAME} APPEND PROPERTY
+	INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 # Unused executable so cmake will generate library and custom target.
